@@ -12,7 +12,7 @@ public class InputManager : MonoBehaviour
 
         input.Direction = new Vector3(input.Horizontal,0, input.Vertical);
 
-        input.HasInput = (input.Direction.magnitude > 0f ? true:false);
+        input.HasInput = (input.Direction.sqrMagnitude > 0f ? true:false);
 
        
     }

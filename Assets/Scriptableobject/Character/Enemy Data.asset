@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 82302aed25677e64aaf167b33196823a, type: 3}
-  m_Name: Player Data
+  m_Name: Enemy Data
   m_EditorClassIdentifier: 
   moveSpeed: 10
   lookSpeed: 20
-  searchRadius: 10
+  searchRadius: 2

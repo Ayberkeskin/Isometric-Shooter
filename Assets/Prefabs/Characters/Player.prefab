@@ -25,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2800084986507651793, guid: e1676b58fe960644086092d83adc7d40, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.014
       objectReference: {fileID: 0}
     - target: {fileID: 2800084986507651793, guid: e1676b58fe960644086092d83adc7d40, type: 3}
       propertyPath: m_LocalRotation.w
@@ -59,6 +59,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2800084986507651794, guid: e1676b58fe960644086092d83adc7d40, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2800084987450188410, guid: e1676b58fe960644086092d83adc7d40, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -90,6 +94,9 @@ MonoBehaviour:
   characterData: {fileID: 11400000, guid: 9947d95db83c57b46b2ba9ea569b7e84, type: 2}
   rb: {fileID: 2251865908847548210}
   modelTransform: {fileID: 3762943736971706306}
+  layer:
+    serializedVersion: 2
+    m_Bits: 8
   input: {fileID: 11400000, guid: d61009c86ad93e04090d6c52958542b8, type: 2}
 --- !u!4 &3762943736971706306 stripped
 Transform:
