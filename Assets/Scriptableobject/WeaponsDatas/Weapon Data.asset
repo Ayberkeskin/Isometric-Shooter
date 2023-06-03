@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82302aed25677e64aaf167b33196823a, type: 3}
-  m_Name: Player Data
+  m_Script: {fileID: 11500000, guid: fe64e741bd69e2041b428c710be046b6, type: 3}
+  m_Name: Weapon Data
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  lookSpeed: 10
-  searchRadius: 10
+  bullet: {fileID: 4966274993293759304, guid: ff8c0ff00b6c8f0499895c1a03306780, type: 3}
+  damage: 10
+  fireRate: 0.5
