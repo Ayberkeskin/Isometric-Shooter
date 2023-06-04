@@ -17,7 +17,7 @@ namespace Bullets
 
         public void Hit(ITarget target)
         {
-            target.TakeDamage(damage);
+            target.Hit(damage);
         }
 
         public Bullet SetDamage(int damage)

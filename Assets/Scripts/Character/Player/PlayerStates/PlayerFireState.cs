@@ -22,5 +22,9 @@ public class PlayerFireState : IState
         {
             StateManager.SwitchState(StateManager.MoveState);
         }
+        else if (!Player.HasTarget())
+        {
+            StateManager.SwitchState(StateManager.SearchState);
+        }
     }
 }

@@ -1,9 +1,21 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Targets
 {
     public class Target : MonoBehaviour, ITarget
     {
+
+        [Header("Component")]
+        [SerializeField] Collider col;
+        [SerializeField] Rigidbody rb;
+
+        [Header("Event")]
+        public UnityEvent<int> OnHit;
+
+        private bool canTargetable = true;
+        public bool CanTargetable => canTargetable;
+
         private void OnEnable()
         {
             TargetManager.AddTarget(this);
@@ -12,9 +24,9 @@ namespace Targets
         {
             TargetManager.RemoveTarget(this);
         }
-        public void TakeDamage(int damage)
+        public void Hit(int damage)
         {
-            Debug.Log($"{name} take{damage} damage");
+            OnHit?.Invoke(damage);
         }
 
         public Transform GetTransform()
@@ -22,11 +34,12 @@ namespace Targets
             return transform;
         }
 
-        public bool IsAlive()
+        public void CanTargetAnyMore()
         {
-            return true;
+            canTargetable = false;
+            col.enabled = false;
+            rb.isKinematic = true;
         }
-
      
     }
 }
