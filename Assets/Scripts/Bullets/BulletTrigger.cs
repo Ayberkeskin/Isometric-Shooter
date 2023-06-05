@@ -1,5 +1,6 @@
 using Targets;
 using UnityEngine;
+using ObjectPoollings;
 
 namespace Bullets
 {
@@ -13,8 +14,8 @@ namespace Bullets
             {
                 bullet.Hit(target);
             }
-
-            Destroy(gameObject);
+            BulletPool.Instance.Enqueue(bullet);
+            
         }
 
     }

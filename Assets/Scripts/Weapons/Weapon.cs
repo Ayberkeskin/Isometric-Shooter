@@ -1,4 +1,5 @@
 using Bullets;
+using ObjectPoollings;
 using UnityEngine;
 
 namespace Weapons
@@ -21,13 +22,14 @@ namespace Weapons
                 return;
             lastFireTime = Time.time;
 
-            //Pool
-            Bullet bullet = Instantiate(weaponData.Bullet);
+            
+            Bullet bullet = BulletPool.Instance.Dequeue();
 
             bullet
                 .SetDamage(weaponData.Damage)
                 .SetPosition(firePoint.position)
-                .SetForward(firePoint.forward);
+                .SetForward(firePoint.forward)
+                .AddForce();
         }
 
         
